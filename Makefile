@@ -1,3 +1,6 @@
+
+VERSION ?= $(shell ./version.sh)
+AS_COMPILER_FLAGS(CFLAGS, "-Wall -Werror")
 AUTOMAKE_OPTIONS = foreign no-dependencies subdir-objects
 ACLOCAL_AMFLAGS = -I m4
 
