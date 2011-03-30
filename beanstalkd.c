@@ -60,7 +60,7 @@ dfork()
     pid_t p;
 
     p = fork();
-    if (p == -1) exit(1);
+    if (p == -1) twarn("fork()"), exit(1);
     if (p) exit(0);
 }
 
@@ -101,6 +101,7 @@ su(const char *user) {
 void
 exit_cleanly(int sig)
 {
+    twarnx("exit_cleanly(%d)", sig);
     binlog_shutdown();
     exit(0);
 }

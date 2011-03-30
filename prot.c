@@ -1590,6 +1590,7 @@ h_conn_timeout(conn c)
 void
 enter_drain_mode(int sig)
 {
+    twarnx("enter_drain_mode(%d)", sig);
     drain_mode = 1;
 }
 
